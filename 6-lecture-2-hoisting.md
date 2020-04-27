@@ -22,7 +22,7 @@ console.log(greeting);
 var greeting = 'Hello';
 
 // a. 'Hello'
-// b. undefined
+// b. undefined - this is the answer 
 // c. Uncaught ReferenceError: greeting is not defined
 ```
 

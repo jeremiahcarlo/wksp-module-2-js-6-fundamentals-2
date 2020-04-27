@@ -6,12 +6,17 @@ let verifyEquals = require('./verify-equals.js');
 // If any element in the array is not a number, skip it. If the array is empty, return zero.
 
 function f(arr) {
-
+    let sum = 0;
+    if (arr.empty) return 0;
+    for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") sum += arr[i];
+    }
+    return sum;
 }
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = [[10, 10], [11, 11], [10, "a", 10], [], [10, 30]];
+let outputs = [20, 22, 20, 0, 40];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.
