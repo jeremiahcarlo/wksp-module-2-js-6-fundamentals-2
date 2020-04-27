@@ -13,12 +13,26 @@ let verifyEquals = require('../../assets/verify-equals');
 //    - A for loop might be helpful
 
 function f(str) {
+    if (str.length === 0) {
+    return "";
+    }
+    let array = str.split(" ");
+    let sortedArray = array.sort((a, b) => {
+    return a.length - b.length;
+    });
 
+    return sortedArray[sortedArray.length - 1];
 }
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = [
+    "aa aaa",
+    "allo l",
+    "jean aaaa",
+    "",
+    "school orange decode avalanche"
+];
+let outputs = ["aaa", "allo", "aaaa", "", "avalanche"];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.
